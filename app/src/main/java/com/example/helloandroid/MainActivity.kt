@@ -2,6 +2,8 @@ package com.example.helloandroid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -10,8 +12,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    fun onClick(view: View) {
+        val imageView = findViewById<ImageView>(R.id.image)
+        imageView.setImageResource(R.drawable.icon)
 
-    fun onClick(view: android.view.View) {
         Toast.makeText( this, "안녕하세요 버튼 클릭입니다", Toast.LENGTH_LONG).show()
     }
 }
